@@ -1,0 +1,9 @@
+flutter packages get: to make sure flutter picks up pubspec.yaml file
+
+.idea: holds some configurations for android studio
+build: holds the output of the application
+.metadata: flutter tool will save some information here whih it will needs to build our application correctly
+same for .packages: it will manage some internal dependencies, some packages this project needs
+flutter_complete_guide.iml: manage some internal dependencies and some settings for this project
+pubspec.yaml: will allow you to manage the dependencies of your project, you can configure which other 3rd party packages your project might be using, you can configure other things like fonts and images you want to use in your application
+pubspec.lock: will holds more details about all the dependencies you have
