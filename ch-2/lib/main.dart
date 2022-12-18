@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './question.dart';
+import './answer.dart';
 
 void main() {
   // runApp(const MyApp());
@@ -41,21 +42,26 @@ class _MyAppState extends State<MyApp> {
         body: Column(
           children: [
             // Text(questions[_questionIndex]),
-            Question(questions[_questionIndex]),
-            ElevatedButton(
-              onPressed: _answerQuestion,
-              child: const Text('Answer 1'),
+            Question(
+              questions[_questionIndex],
             ),
-            ElevatedButton(
-              onPressed: () => print('Answer 2 chosen!'),
-              child: const Text('Answer 2'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                print('Answer 3 chosen!');
-              },
-              child: const Text('Answer 3'),
-            ),
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
+            // ElevatedButton(
+            //   onPressed: _answerQuestion,
+            //   child: const Text('Answer 1'),
+            // ),
+            // ElevatedButton(
+            //   onPressed: () => print('Answer 2 chosen!'),
+            //   child: const Text('Answer 2'),
+            // ),
+            // ElevatedButton(
+            //   onPressed: () {
+            //     print('Answer 3 chosen!');
+            //   },
+            //   child: const Text('Answer 3'),
+            // ),
           ],
         ),
         // const Text('This is my default text!'),

@@ -33,3 +33,5 @@ void main() => runApp(MyApp());
 because of type inference we can remove Generic type from column children as soon as we start adding widgets
 
 to turn a class to private it should start with _, same for variables and methods/functions
+
+VoidCallback is a type of function that doesn't accept any arguments and don't return anything
