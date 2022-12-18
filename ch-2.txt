@@ -7,3 +7,19 @@ same for .packages: it will manage some internal dependencies, some packages thi
 flutter_complete_guide.iml: manage some internal dependencies and some settings for this project
 pubspec.yaml: will allow you to manage the dependencies of your project, you can configure which other 3rd party packages your project might be using, you can configure other things like fonts and images you want to use in your application
 pubspec.lock: will holds more details about all the dependencies you have
+
+class Person {
+  String name;
+  int age;
+  Person({ required this.name, this.age = 30});
+}
+
+class Person {
+  String name = '';
+  int age = 30;
+//   Person({ required this.name, this.age = 30});
+  Person(String name,int age) {
+    this.name = name;
+    this.age = age;
+  }
+}
