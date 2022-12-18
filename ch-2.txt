@@ -23,3 +23,8 @@ class Person {
     this.age = age;
   }
 }
+
+MaterialApp uses a named argument, Text uses a positional argument
+void main() => runApp(MyApp());
+
+because of type inference we can remove Generic type from column children as soon as we start adding widgets
