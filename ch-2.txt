@@ -22,6 +22,9 @@ class Person {
     this.name = name;
     this.age = age;
   }
+  Person.veryOld(this.name) {
+    age = 60;
+  }
 }
 
 MaterialApp uses a named argument, Text uses a positional argument
