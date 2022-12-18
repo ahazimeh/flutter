@@ -40,3 +40,8 @@ const is compiled time const whereas final is run time const
 compiled time const also implicitly means run time const
 
 to allow String and null when write String? username = 'max' rather than var username = 'max';
+
+ElevatedButton automatically picks up your main theme color set by your application which is blue in our project
+RaisedButton -> ElevatedButton
+FlatButton -> TextButton
+OutlineButton -> OutlinedButton
