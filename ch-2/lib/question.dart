@@ -1,5 +1,3 @@
-// import 'package:flutter/src/widgets/container.dart';
-// import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 
 class Question extends StatelessWidget {
@@ -18,6 +16,5 @@ class Question extends StatelessWidget {
         textAlign: TextAlign.center,
       ),
     );
-    // return Container();
   }
 }

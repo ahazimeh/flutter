@@ -1,5 +1,3 @@
-// import 'package:flutter/src/widgets/container.dart';
-// import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
@@ -7,8 +5,6 @@ class Answer extends StatelessWidget {
   final String answerText;
 
   const Answer(this.selectHandler, this.answerText, {super.key});
-
-  // const Answer(void Function() answerQuestion, {super.key});
 
   @override
   Widget build(BuildContext context) {
