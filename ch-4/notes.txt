@@ -1,0 +1,19 @@
+flutter widget catalog to view available widgets
+you can also visit api.flutter.dev and search for available widgets there
+
+Most Important Widgets:
+App/Page Setup:
+    MaterialApp/CupertinoApp - Scaffold/CupertinoPageScaffold
+Layout:
+    Container - Raw - Column
+Row/Column Children:
+    Flexible - Expanded
+Content Widgets:
+    Stack - Card
+Repeat Elements:
+    ListView - GridView - ListTitle(you can use it inside list view)
+Content Type:
+    Text - Images - Icon
+User Input:
+    TextField - RaisedButton/FlatButton
+    invisible widgets to build your own custom user input widgets: GestureDetector - InkWell(partly invisible widget)

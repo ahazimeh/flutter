@@ -1,0 +1,1 @@
+for ios simulator: open -a simulator.app, or launching it through xcode
