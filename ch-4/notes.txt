@@ -31,3 +31,5 @@ Column/Row:
     -must use widgets if widgets sit next to/above each other
 
 string interpolation: ${}
+
+if the package didn't get installed automatically flutter packages get
