@@ -17,3 +17,15 @@ Content Type:
 User Input:
     TextField - RaisedButton/FlatButton
     invisible widgets to build your own custom user input widgets: GestureDetector - InkWell(partly invisible widget)
+
+Container vs Column/Row:
+Container:
+    -container: takes exactly one child widget
+    -rich alignment & styling options
+    -flexible width
+    -perfect for custom styling
+Column/Row:
+    -takes multiple child widgets
+    -alignment but no styling options
+    -always takes full available height or width
+    -must use widgets if widgets sit next to/above each other
