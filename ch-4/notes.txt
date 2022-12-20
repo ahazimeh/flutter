@@ -39,3 +39,16 @@ ListView(children: []) ListView.builder()
 for long lists always use ListView.builder because it has more optimizations
 
 Navigator.of(context).pop(); // used to close most screen that is displayed
+
+// show bottom model
+void _startAddNewTransaction(BuildContext ctx) {
+showModalBottomSheet(
+    context: ctx,
+    builder: (bCtx) {
+        return GestureDetector(
+        onTap: () {},
+        child: NewTransaction(_addNewTransaction),
+        behavior: HitTestBehavior.opaque,
+        );
+    });
+}
