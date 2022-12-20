@@ -33,3 +33,7 @@ Column/Row:
 string interpolation: ${}
 
 if the package didn't get installed automatically flutter packages get
+
+ListView is a Column with a singleChildScrollView
+ListView(children: []) ListView.builder()
+for long lists always use ListView.builder because it has more optimizations
