@@ -54,3 +54,8 @@ showModalBottomSheet(
 }
 
 to get an idea of how to mix and match colors you can look for material design documentation if you to get an idea for how to mix and match colors and which combinations work
+
+
+color: Theme.of(context).colorScheme.primary,
+fonts:
+style: Theme.of(context).textTheme.headline6,
