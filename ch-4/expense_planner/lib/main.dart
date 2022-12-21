@@ -24,15 +24,16 @@ class MyApp extends StatelessWidget {
               ),
             ),
         appBarTheme: AppBarTheme(
-          toolbarTextStyle: ThemeData.light()
-              .textTheme
-              .copyWith(
-                headline6: const TextStyle(
-                  fontFamily: 'OpenSans',
-                  fontSize: 20,
-                ),
-              )
-              .bodyText2,
+          // Will need to research this
+          // toolbarTextStyle: ThemeData.light()
+          //     .textTheme
+          //     .copyWith(
+          //       headline6: const TextStyle(
+          //         fontFamily: 'OpenSans',
+          //         fontSize: 20,
+          //       ),
+          //     )
+          //     .bodyText2,
           titleTextStyle: ThemeData.light()
               .textTheme
               .copyWith(
