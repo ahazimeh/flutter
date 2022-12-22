@@ -59,3 +59,31 @@ to get an idea of how to mix and match colors you can look for material design d
 color: Theme.of(context).colorScheme.primary,
 fonts:
 style: Theme.of(context).textTheme.headline6,
+
+With the latest version of Flutter, some theme identifiers changed.
+
+display4 => headline1;
+display3 => headline2;
+display2 => headline3;
+display1 => headline4;
+headline => headline5;
+title    => headline6; // used in previous lecture
+subhead  => subtitle1;
+subtitle => subtitle2;
+body2    => bodyText1; // will be used in future lectures
+body     => bodyText2; // will be used in future lectures
+In case the textTheme doesn't work on the appBarTheme, change the code from
+
+appBarTheme: AppBarTheme(
+  textTheme: ThemeData.light().textTheme.copyWith(...)
+)
+to
+
+appBarTheme: AppBarTheme(
+  titleTextStyle: TextStyle(
+    fontFamily: 'OpenSans',
+    fontSize: 20,
+    fontWeight: FontWeight.bold
+  )
+)
+
