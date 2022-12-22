@@ -1,4 +1,5 @@
 // import 'dart:js_util';
+import 'package:expense_planner/widgets/chart_bar.dart';
 import 'package:intl/intl.dart';
 
 import 'package:expense_planner/models/transaction.dart';
@@ -22,10 +23,17 @@ class Chart extends StatelessWidget {
           totalSum += recentTransactions[i].amount;
         }
       }
-      print(DateFormat.E().format(weekday));
-      print(totalSum);
 
-      return {'day': DateFormat.E().format(weekday), 'amount': totalSum};
+      return {
+        'day': DateFormat.E().format(weekday).substring(0, 1),
+        'amount': totalSum
+      };
+    });
+  }
+
+  double get totalSpending {
+    return groupedTransactionValues.fold(0.0, (previousValue, element) {
+      return previousValue + (element['amount'] as double);
     });
   }
 
@@ -36,7 +44,14 @@ class Chart extends StatelessWidget {
       elevation: 6,
       margin: EdgeInsets.all(10),
       child: Row(
-        children: [],
+        children: groupedTransactionValues.map((data) {
+          return ChartBar(
+              data['day'] as String,
+              data['amount'] as double,
+              totalSpending == 0.0
+                  ? 0.0
+                  : (data['amount'] as double) / totalSpending);
+        }).toList(),
       ),
     );
   }

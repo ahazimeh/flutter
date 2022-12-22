@@ -87,3 +87,4 @@ appBarTheme: AppBarTheme(
   )
 )
 
+DateFormat.E().format(weekday) // get first 3 characters from a day given DateTime
