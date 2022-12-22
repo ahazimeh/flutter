@@ -88,3 +88,6 @@ appBarTheme: AppBarTheme(
 )
 
 DateFormat.E().format(weekday) // get first 3 characters from a day given DateTime
+
+use Flexible widget and use flex:1 and fit properties to control the space for every item
+and to force an element on same line you can wrap it with FittedBox
