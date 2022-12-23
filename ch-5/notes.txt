@@ -44,3 +44,6 @@ mainAxisSize: MainAxisSize.min, // to let Row gets the minimum size rather than 
 SafeArea widget is necessary for some devices that had some reserved spaces for it in the top
 
 CupertinoApp rather than MaterialApp
+CupertinoTextField with placeholder rather than TextField with label
+
+CupertinoButton rather than TextButton and by adding a color it will turn into elevatedButton
