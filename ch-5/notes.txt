@@ -35,3 +35,8 @@ it is a convention to put all dart imports at the very top, then package then yo
 
 import 'dart:io';
 Platform.isIOS
+
+for ios you use CupertinoPageScaffold and rather than AppBar use CupertinoNavigationBar
+
+CupertinoIcons rather than Icons
+mainAxisSize: MainAxisSize.min, // to let Row gets the minimum size rather than max size
