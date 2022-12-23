@@ -40,3 +40,7 @@ for ios you use CupertinoPageScaffold and rather than AppBar use CupertinoNaviga
 
 CupertinoIcons rather than Icons
 mainAxisSize: MainAxisSize.min, // to let Row gets the minimum size rather than max size
+
+SafeArea widget is necessary for some devices that had some reserved spaces for it in the top
+
+CupertinoApp rather than MaterialApp
