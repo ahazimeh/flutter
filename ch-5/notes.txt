@@ -28,3 +28,10 @@ padding: EdgeInsets.only(
           )
 and this is a link for an improved model bottom sheet
 https://stackoverflow.com/questions/53869078/how-to-move-bottomsheet-along-with-keyboard-which-has-textfieldautofocused-is-t/57515977#57515977
+
+to fit with ios devices some elements has adaptive constructor
+
+it is a convention to put all dart imports at the very top, then package then your own imports
+
+import 'dart:io';
+Platform.isIOS

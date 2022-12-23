@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:expense_planner/models/transaction.dart';
 import 'package:expense_planner/widgets/chart.dart';
 import 'package:expense_planner/widgets/new_transaction.dart';
@@ -156,7 +158,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('Show Chart'),
-                  Switch(
+                  Switch.adaptive(
                       activeColor: Theme.of(context).colorScheme.secondary,
                       value: _showChart,
                       onChanged: (val) {
@@ -187,10 +189,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => _startAddNewTransaction(context),
-        child: const Icon(Icons.add),
-      ),
+      floatingActionButton: Platform.isIOS
+          ? Container()
+          : FloatingActionButton(
+              onPressed: () => _startAddNewTransaction(context),
+              child: const Icon(Icons.add),
+            ),
     );
   }
 }
