@@ -18,3 +18,13 @@ set size of parent widget
 LayoutBuilder(builder: (ctx, constraints) {
 // so here it takes 15 % of parent height
 constraints.maxHeight * 0.15,
+
+// he used this to calculate the space that the keyboard has taken
+padding: EdgeInsets.only(
+            top: 10,
+            left: 10,
+            right: 10,
+            bottom: MediaQuery.of(context).viewInsets.bottom + 10,
+          )
+and this is a link for an improved model bottom sheet
+https://stackoverflow.com/questions/53869078/how-to-move-bottomsheet-along-with-keyboard-which-has-textfieldautofocused-is-t/57515977#57515977
