@@ -8,3 +8,8 @@ IOS Animations ? Route Transitions
 IOS Fonts
 
 height: (MediaQuery.of(context).size.height - appBar.preferredSize.height - MediaQuery.of(context).padding.top) * 0.4,
+
+// so if the user changed the font size of his mobile
+// by default if the user didn't change anything the curScaleFactor will be 1
+final curScaleFactor = MediaQuery.of(context).textScaleFactor;
+Text('This changes!', style: TextStyle(fontSize: 20 * curScaleFactor));
