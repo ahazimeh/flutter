@@ -1,0 +1,10 @@
+Android:
+Material-Design Look / Style
+Android Animations ? Route Transitions
+Android Fonts
+IOS:
+Cupertino Look / Style
+IOS Animations ? Route Transitions
+IOS Fonts
+
+height: (MediaQuery.of(context).size.height - appBar.preferredSize.height - MediaQuery.of(context).padding.top) * 0.4,
