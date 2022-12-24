@@ -33,3 +33,10 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
+
+the context is the element of a widget in the element tree
+all context knows about each others, where they are and which other widgets exists around them
+
+using keys
+key: ValueKey(transaction[index].id),
+key: UniqueKey(), // it generates a new key for every rerender
