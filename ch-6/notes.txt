@@ -9,3 +9,27 @@ StatelessWidget:
     Constructor Function -> build
 StatefulWidget
     Constructor Function -> initState -> build -> setState -> didUpdateWidget -> build -> dispose
+
+App Lifecycle
+    inactive state
+    paused
+    resumed
+    suspending
+mixins:
+class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
+  @override
+  void initState() {
+    WidgetsBinding.instance.addObserver(this);
+    super.initState();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    print(state);
+  }
+
+  @override
+  dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
