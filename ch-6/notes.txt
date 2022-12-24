@@ -3,3 +3,9 @@ Widget Tree / Element Tree / Render Tree
 2 important triggers that can lead to a rebuild:
 setState
 MediaQuery.of, Theme.of (like when rotating the device, the media query changes which will cause the build method to be called), same is true if the soft keyboard apears
+
+Widget Lifecycle:
+StatelessWidget:
+    Constructor Function -> build
+StatefulWidget
+    Constructor Function -> initState -> build -> setState -> didUpdateWidget -> build -> dispose
