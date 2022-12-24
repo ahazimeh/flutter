@@ -53,11 +53,12 @@ class Chart extends StatelessWidget {
                   1, // if we gave another child flex: 2 then the other child will take twice the space
               fit: FlexFit.tight,
               child: ChartBar(
-                  data['day'] as String,
-                  data['amount'] as double,
-                  totalSpending == 0.0
-                      ? 0.0
-                      : (data['amount'] as double) / totalSpending),
+                data['day'] as String,
+                data['amount'] as double,
+                totalSpending == 0.0
+                    ? 0.0
+                    : (data['amount'] as double) / totalSpending,
+              ),
             );
           }).toList(),
         ),
