@@ -19,6 +19,7 @@ class CategoriesScreen extends StatelessWidget {
         ),
         children: DUMMY_CATEGORIES.map((catData) {
           return CategoryItem(
+            catData.id,
             catData.title,
             catData.color,
           );
