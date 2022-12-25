@@ -1,1 +1,6 @@
 InkWell is a GestureDetector which also fires off a ripple effect
+if there is no borderRadius shape then you can use ClipRRect
+ClipRRect
+
+when in a stack you can use Positioned to specify the position of another element, this only works in a stack
+Positioned
