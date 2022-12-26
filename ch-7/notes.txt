@@ -6,3 +6,5 @@ when in a stack you can use Positioned to specify the position of another elemen
 Positioned
 
 Divider() // add a divider
+
+ModalRoute.of(context) isn't available for initState so we use didChangeDependencies
