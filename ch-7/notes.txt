@@ -8,3 +8,5 @@ Positioned
 Divider() // add a divider
 
 ModalRoute.of(context) isn't available for initState so we use didChangeDependencies
+
+SwitchListTile // will set switch buttons with title and subtitle
