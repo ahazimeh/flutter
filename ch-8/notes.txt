@@ -20,3 +20,17 @@ value: products[index],
 
           // child:
           ClipRRect(
+
+          PopupMenuButton(
+            onSelected: (FilterOptions selectedValue) {
+              if (selectedValue == FilterOptions.Favorites) {
+              } else {}
+            },
+            icon: Icon(Icons.more_vert),
+            itemBuilder: (ctx) => [
+              PopupMenuItem(
+                  child: Text('Only Favorites'),
+                  value: FilterOptions.Favorites),
+              PopupMenuItem(child: Text('Show All'), value: FilterOptions.All),
+            ],
+          )
