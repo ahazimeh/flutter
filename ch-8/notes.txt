@@ -1,0 +1,22 @@
+// main
+MultiProvider(
+    providers: [
+    ChangeNotifierProvider(
+        create: (_) => Products(),
+    ),
+    ],
+
+final product = Provider.of<Product>(context, listen: true);
+
+
+itemBuilder: (ctx, index) => ChangeNotifierProvider.value(
+value: products[index],
+
+
+    return Consumer<Product>(
+        child:... here you add a child and it will not rerender when used inside the builder
+      builder: (context, product, child) =>
+
+
+          // child:
+          ClipRRect(
