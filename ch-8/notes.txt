@@ -34,3 +34,16 @@ value: products[index],
               PopupMenuItem(child: Text('Show All'), value: FilterOptions.All),
             ],
           )
+
+
+                Chip(
+                  label: Text('\$${cart.totalAmount}'),
+                  backgroundColor: Theme.of(context).colorScheme.primary,
+                ),
+
+Theme.of(context)
+                            .primaryTextTheme
+                            .headline6
+                            ?.color
+
+Spacer will take a lot of space to push other elements
