@@ -44,3 +44,5 @@ ScaffoldMessenger.of(context).hideCurrentSnackBar();
       },
 
 backgroundImage: NetworkImage(imageUrl),
+
+edit product screen: focus node
