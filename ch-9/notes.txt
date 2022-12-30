@@ -7,7 +7,7 @@ ScaffoldMessenger.of(context).hideCurrentSnackBar();
                   content: const Text(
                     'Added item to cart!',
                   ),
-                  duration: const Duration(seconds: 10),
+                  duration: const Duration(seconds: 2),
                   action: SnackBarAction(
                     label: 'UNDO',
                     onPressed: () {
@@ -17,3 +17,28 @@ ScaffoldMessenger.of(context).hideCurrentSnackBar();
                   ),
                 ),
               );
+
+// on Dismissible
+
+      confirmDismiss: (direction) {
+        return showDialog(
+          context: context,
+          builder: (ctx) => AlertDialog(
+            title: Text('Are you sure?'),
+            content: Text('Do you want to remove the item from the cart?'),
+            actions: [
+              TextButton(
+                  onPressed: () {
+                    Navigator.of(ctx).pop(false);
+                  },
+                  child: Text('No')),
+              TextButton(
+                  onPressed: () {
+                    Navigator.of(ctx).pop(true);
+                  },
+                  child: Text('Yes')),
+            ],
+          ),
+        );
+        // return Future.value(true);
+      },
