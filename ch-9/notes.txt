@@ -1,0 +1,19 @@
+Scaffold.of(context).openDrawer(); // note you can't use it in the same widget where you defined the Scaffold;
+
+// to show snackbar popup
+ScaffoldMessenger.of(context).hideCurrentSnackBar();
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: const Text(
+                    'Added item to cart!',
+                  ),
+                  duration: const Duration(seconds: 10),
+                  action: SnackBarAction(
+                    label: 'UNDO',
+                    onPressed: () {
+                      cart.removeSingleItem(product.id);
+                      // ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                    },
+                  ),
+                ),
+              );
