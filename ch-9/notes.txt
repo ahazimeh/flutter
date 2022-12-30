@@ -42,3 +42,5 @@ ScaffoldMessenger.of(context).hideCurrentSnackBar();
         );
         // return Future.value(true);
       },
+
+backgroundImage: NetworkImage(imageUrl),
