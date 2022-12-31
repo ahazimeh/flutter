@@ -44,6 +44,13 @@ class _EditProductScreenState extends State<EditProductScreen> {
 
   void _updateImageUrl() {
     if (!_imageUrlFocusNode.hasFocus) {
+      if (_imageUrlController.text.isEmpty) {
+        return setState(() {});
+      }
+      if (!_imageUrlController.text.startsWith('http') &&
+          !_imageUrlController.text.startsWith('https')) {
+        return;
+      }
       setState(() {});
     }
   }
@@ -110,6 +117,18 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 onFieldSubmitted: (value) {
                   FocusScope.of(context).requestFocus(_descriptionFocusNode);
                 },
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return 'Please enter a price';
+                  }
+                  if (double.tryParse(value) == null) {
+                    return 'Please enter a valid number';
+                  }
+                  if (double.parse(value) <= 0) {
+                    return 'Please enter a number greater than 0';
+                  }
+                  return null;
+                },
                 onSaved: (value) {
                   _editedProduct = Product(
                     title: _editedProduct.title,
@@ -125,6 +144,15 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 maxLines: 3,
                 keyboardType: TextInputType.multiline,
                 focusNode: _descriptionFocusNode,
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return 'Please enter a description';
+                  }
+                  if (value.length < 10) {
+                    return 'Should be at least 10 characters long.';
+                  }
+                  return null;
+                },
                 onSaved: (value) {
                   _editedProduct = Product(
                     title: _editedProduct.title,
@@ -163,11 +191,28 @@ class _EditProductScreenState extends State<EditProductScreen> {
                       textInputAction: TextInputAction.done,
                       controller: _imageUrlController,
                       onEditingComplete: () {
+                        if (_imageUrlController.text.isEmpty) {
+                          return setState(() {});
+                        }
+                        if (!_imageUrlController.text.startsWith('http') &&
+                            !_imageUrlController.text.startsWith('https')) {
+                          return;
+                        }
                         setState(() {});
                       },
                       focusNode: _imageUrlFocusNode,
                       onFieldSubmitted: (_) {
                         _saveForm();
+                      },
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Please enter an image URL.';
+                        }
+                        if (!value.startsWith('http') &&
+                            !value.startsWith('http')) {
+                          return 'Please enter a valid URL.';
+                        }
+                        return null;
                       },
                       onSaved: (value) {
                         _editedProduct = Product(
