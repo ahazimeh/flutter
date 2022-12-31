@@ -41,7 +41,7 @@ class ProductItem extends StatelessWidget {
             icon: const Icon(Icons.shopping_cart),
             onPressed: () {
               cart.addItem(
-                product.id,
+                product.id != null ? product.id : '0',
                 product.price,
                 product.title,
               );
