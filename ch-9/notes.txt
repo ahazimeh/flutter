@@ -47,3 +47,6 @@ backgroundImage: NetworkImage(imageUrl),
 
 edit product screen: focus node
 and don't forget to dispose them otherwise they will stick in the memory after the user navigate to another page
+
+// loading spinner
+CircularProgressIndicator
