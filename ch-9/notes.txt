@@ -50,3 +50,10 @@ and don't forget to dispose them otherwise they will stick in the memory after t
 
 // loading spinner
 CircularProgressIndicator
+
+// fetch data
+either in the init function this way:
+    Future.delayed(Duration.zero).then((_) {
+      Provider.of<Products>(context).fetchAndSetProducts();
+    });
+or inside didChangeDependencies
