@@ -57,3 +57,5 @@ either in the init function this way:
       Provider.of<Products>(context).fetchAndSetProducts();
     });
 or inside didChangeDependencies
+
+// refresh indicator for pull to refresh
