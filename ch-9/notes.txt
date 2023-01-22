@@ -59,3 +59,6 @@ either in the init function this way:
 or inside didChangeDependencies
 
 // refresh indicator for pull to refresh
+
+// to show snackbar inside a future you should define the scaffold outside it
+final scaffold = ScaffoldMessenger.of(context);
