@@ -62,3 +62,5 @@ or inside didChangeDependencies
 
 // to show snackbar inside a future you should define the scaffold outside it
 final scaffold = ScaffoldMessenger.of(context);
+
+FutureBuilder will help to fetch data inside stateless widget and manage our state
