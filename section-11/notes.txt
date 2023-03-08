@@ -3,3 +3,5 @@
     } catch(error) {
 
     }
+
+use ChangeNotifierProxyProvider to pass data between classes rather than ChangeNotifierProvider
