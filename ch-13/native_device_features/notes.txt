@@ -4,3 +4,4 @@ path
 path_provider
 
 sqflite
+location
