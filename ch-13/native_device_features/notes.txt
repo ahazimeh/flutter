@@ -1,3 +1,6 @@
 image_picker package
 
+path
 path_provider
+
+sqflite
