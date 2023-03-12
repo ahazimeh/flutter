@@ -5,3 +5,6 @@ path_provider
 
 sqflite
 location
+google_maps_flutter
+
+didn't work on any features related to maps
